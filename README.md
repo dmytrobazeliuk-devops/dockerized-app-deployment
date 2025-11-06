@@ -1,47 +1,41 @@
 # Dockerized Application Deployment
 
-Cloud cost optimization through containerization and efficient resource management
+Cloud cost optimization through containerization and efficient resource management. Migrated legacy applications to Docker containers with Kubernetes orchestration.
 
 ## Features
 
-- **Automated Infrastructure**: Automated provisioning and management
-- **Best Practices**: Follows industry best practices and standards
-- **Scalable**: Designed for scalability and high availability
-- **Documentation**: Comprehensive documentation and examples
+- **Multi-Stage Builds**: Optimized Docker images
+- **Docker Compose**: Local development and testing
+- **Health Checks**: Container health monitoring
+- **Resource Limits**: CPU and memory constraints
+- **Production Ready**: Security best practices
 
-## Tech Stack
+## Quick Start
 
-Docker, Kubernetes, Cloud Optimization
+### Build and run
 
-## Installation
-
-### Prerequisites
-
-- See individual module documentation for specific requirements
-
-### Setup
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/dmytrobazeliuk-devops//var/www/vhosts/devsecops.cv/projects_repos/dockerized-app-deployment.git
-cd /var/www/vhosts/devsecops.cv/projects_repos/dockerized-app-deployment
+docker-compose up -d
 ```
 
-2. Follow the setup instructions in the documentation
+### Build image
 
-## Usage
-
-See individual module documentation for usage examples.
-
-## Project Structure
-
+```bash
+docker build -t app:latest .
 ```
-/var/www/vhosts/devsecops.cv/projects_repos/dockerized-app-deployment/
-├── README.md              # This file
-├── modules/               # Reusable modules
-├── examples/              # Usage examples
-└── docs/                  # Documentation
+
+### Run container
+
+```bash
+docker run -p 3000:3000 app:latest
 ```
+
+## Architecture
+
+- **Application**: Node.js application
+- **Database**: PostgreSQL
+- **Cache**: Redis
+- **Reverse Proxy**: Nginx
 
 ## Contributing
 
